@@ -1,0 +1,8 @@
+article {
+    background: white;
+}
+
+article .container {
+    display: flex;
+    flex-direction: column;
+}

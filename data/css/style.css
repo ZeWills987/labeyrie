@@ -1,0 +1,284 @@
+/* Police ces caractères */
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Tout le conteneu du site */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Bare de navigation */
+.nav {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    box-shadow: 15px 5px 5px grey;
+}
+
+.nav #logo {
+    height: 100%;
+    display: flex;
+    flex: 4 2 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav #logo img {
+    margin: 10px;
+    width: 180px;
+    height: auto;
+}
+
+.nav nav {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    flex: 1 1 80%;
+    justify-content: end;
+}
+
+.nav nav ul {
+    margin: 0 0 0 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex: 3 1 80%;
+    align-items: center;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.nav nav ul li {
+    margin: 0 50px 0 0;
+    padding: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav nav ul li a {
+    color: #ccc;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav nav ul li a.active {
+    color: #fff;
+}
+
+.nav nav ul li a:hover {
+    color: #fff;
+}
+
+/* Toutes les infos concernant Labeyrie */
+.container {
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* L'en tête de la page */
+header {
+    margin: 0;
+    display: flex;
+    flex-grow: 3;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header .content {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .content h1 {
+    font-weight: 600;
+}
+
+header .content h3 {
+    width: 70%;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* La partie Infromations générale */
+article {
+    margin: 0;
+    display: flex;
+    flex-grow: 5;
+    flex-direction: column;
+    justify-content: center;
+}
+
+article .ligne-blocs {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+article .line-blocs-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+article .line-blocs-row2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    text-align: end;
+}
+
+article .line-blocs-row .cellule {
+    margin: 0 20px 0 5px;
+    width: 240px;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: top ease 1s;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    top: 0;
+}
+
+article .line-blocs-row .cellule:hover {
+    background-color: #ccc;
+    top: -8px;
+}
+
+
+article .line-blocs-row .cellule img {
+    width: 200px;
+    height: 200px;
+}
+
+article .line-blocs-row .cellule p {
+    margin: 0 0 50px 0;
+}
+
+/* Le pied de page */
+footer {
+    margin: 10px 10px 10px 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-grow: 10;
+    flex-direction: row;
+}
+
+footer .f-left {
+    display: flex;
+    flex: 1 1 20%;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+footer .f-left .logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+footer .f-left .logos {
+    text-decoration: none;
+}
+
+footer .f-left .logos a img {
+    margin: 10px;
+    width: 30px;
+}
+
+footer .f-mid {
+    display: flex;
+    flex: 1 1 80%;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+footer .f-mid .logo {
+    width: 150px;
+}
+
+footer .f-mid .logo img {
+    width: 100%;
+}
+
+footer .f-mid .mid-content {
+    display: flex;
+    flex-direction: row;
+}
+
+footer .f-mid .mid-content p {
+    margin: 8px;
+}
+
+footer .f-mid .mid-content p a {
+    color: #ccc;
+
+}
+
+footer .f-right {
+    display: flex;
+    flex: 1 1 20%;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+footer .f-right p {
+    margin: 10px 0 0 0;
+    color: rgb(95, 95, 95);
+    font-size: small;
+}
+
+@media screen and (min-width:700px) and (max-width:950px) {
+    .nav nav ul li {
+        margin: 0 10px 0 0;
+    }
+
+    body .container {
+        width: 720px;
+    }
+
+
+
+    footer .f-left {
+        flex: 1 1 max-content;
+    }
+
+    footer .f-mid {
+        flex: 1 1 max-content;
+    }
+
+    footer .f-right {
+        flex: 1 1 max-content;
+    }
+}
