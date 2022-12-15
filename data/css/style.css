@@ -70,7 +70,7 @@ body {
 }
 
 .nav nav ul li a {
-    color: #ccc;
+    color: black;
     font-size: 1.2em;
     font-weight: 500;
     text-decoration: none;
@@ -79,11 +79,11 @@ body {
 }
 
 .nav nav ul li a.active {
-    color: #fff;
+    color: rgb(145, 145, 145);
 }
 
 .nav nav ul li a:hover {
-    color: #fff;
+    color: #ccc;
 }
 
 /* Toutes les infos concernant Labeyrie */
@@ -145,11 +145,21 @@ article .line-blocs-row {
     overflow-x: scroll;
 }
 
+article .line-blocs-row>p {
+    width: 70%;
+    font-size: large;
+}
+
 article .line-blocs-row2 {
     display: flex;
     flex-direction: row;
     justify-content: end;
     text-align: end;
+}
+
+article .line-blocs-row2>p {
+    width: 70%;
+    font-size: large;
 }
 
 article .line-blocs-row .cellule {
@@ -162,13 +172,11 @@ article .line-blocs-row .cellule {
     align-items: center;
     position: relative;
     transition: top ease 1s;
-    border: 1px solid #ccc;
     border-radius: 10px;
     top: 0;
 }
 
 article .line-blocs-row .cellule:hover {
-    background-color: #ccc;
     top: -8px;
 }
 
@@ -179,7 +187,11 @@ article .line-blocs-row .cellule img {
 }
 
 article .line-blocs-row .cellule p {
-    margin: 0 0 50px 0;
+    margin: 0 0 5px 0;
+    height: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: large;
 }
 
 /* Le pied de page */
@@ -259,7 +271,11 @@ footer .f-right p {
     font-size: small;
 }
 
-@media screen and (min-width:700px) and (max-width:950px) {
+.nav-mobile {
+    display: none;
+}
+
+@media screen and (min-width:720px) and (max-width:1200px) {
     .nav nav ul li {
         margin: 0 10px 0 0;
     }
@@ -268,6 +284,17 @@ footer .f-right p {
         width: 720px;
     }
 
+    header .content h3 {
+        width: 100%;
+    }
+
+    article .line-blocs-row>p {
+        width: 100%;
+    }
+
+    article .line-blocs-row2>p {
+        width: 100%;
+    }
 
 
     footer .f-left {
@@ -281,4 +308,71 @@ footer .f-right p {
     footer .f-right {
         flex: 1 1 max-content;
     }
+}
+
+@media screen and (min-width:0px) and (max-width:720px) {
+    .nav {
+        display: none;
+    }
+
+    body .container {
+        width: 95%;
+    }
+
+    article .line-blocs-row>p {
+        width: 100%;
+        text-align: start;
+        font-size: medium;
+    }
+
+    article .line-blocs-row2>p {
+        width: 100%;
+        text-align: start;
+        font-size: medium;
+    }
+
+    footer {
+        width: 100%;
+        height: max-content;
+        flex-direction: column;
+    }
+
+    footer .f-right {
+        align-items: center;
+    }
+
+    .nav-mobile {
+        margin: 0;
+        padding: 0;
+        width: 96%;
+        height: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid #ccc;
+        background-color: white;
+        position: sticky;
+        bottom: 0;
+    }
+
+    .nav-mobile ul {
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav-mobile ul li {
+        display: flex;
+        flex: 1 1 20%;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        list-style: none;
+    }
+
+    .nav-mobile ul li i {
+        color: #333;
+    }
+
 }
