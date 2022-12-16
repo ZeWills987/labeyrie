@@ -1,0 +1,102 @@
+/* Le pied de page */
+footer {
+    margin: 10px 10px 10px 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-grow: 10;
+    flex-direction: row;
+}
+
+footer .f-left {
+    display: flex;
+    flex: 1 1 20%;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+footer .f-left .logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+footer .f-left .logos {
+    text-decoration: none;
+}
+
+footer .f-left .logos a img {
+    margin: 10px;
+    width: 30px;
+}
+
+footer .f-mid {
+    display: flex;
+    flex: 1 1 80%;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+footer .f-mid .logo {
+    width: 150px;
+}
+
+footer .f-mid .logo img {
+    width: 100%;
+}
+
+footer .f-mid .mid-content {
+    display: flex;
+    flex-direction: row;
+}
+
+footer .f-mid .mid-content p {
+    margin: 8px;
+}
+
+footer .f-mid .mid-content p a {
+    color: #ccc;
+
+}
+
+footer .f-right {
+    display: flex;
+    flex: 1 1 20%;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+footer .f-right p {
+    margin: 10px 0 0 0;
+    color: rgb(95, 95, 95);
+    font-size: small;
+}
+
+@media screen and (min-width:720px) and (max-width:1200px) {
+    footer .f-left {
+        flex: 1 1 max-content;
+    }
+
+    footer .f-mid {
+        flex: 1 1 max-content;
+    }
+
+    footer .f-right {
+        flex: 1 1 max-content;
+    }
+}
+
+@media screen and (min-width:0px) and (max-width:720px) {
+    footer {
+        width: 100%;
+        height: max-content;
+        flex-direction: column;
+    }
+
+    footer .f-right {
+        align-items: center;
+    }
+}

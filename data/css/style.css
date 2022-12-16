@@ -3,7 +3,7 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/* Tout le conteneu du site */
+/* Tout le contenu du site */
 body {
     margin: 0;
     padding: 0;
@@ -15,76 +15,6 @@ body {
     align-items: center;
 }
 
-/* Bare de navigation */
-.nav {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 80px;
-    display: flex;
-    flex-grow: 1;
-    flex-direction: row;
-    box-shadow: 15px 5px 5px grey;
-}
-
-.nav #logo {
-    height: 100%;
-    display: flex;
-    flex: 4 2 100%;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav #logo img {
-    margin: 10px;
-    width: 180px;
-    height: auto;
-}
-
-.nav nav {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    flex: 1 1 80%;
-    justify-content: end;
-}
-
-.nav nav ul {
-    margin: 0 0 0 0;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    flex: 3 1 80%;
-    align-items: center;
-    flex-direction: row;
-    justify-content: end;
-}
-
-.nav nav ul li {
-    margin: 0 50px 0 0;
-    padding: 9px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-}
-
-.nav nav ul li a {
-    color: black;
-    font-size: 1.2em;
-    font-weight: 500;
-    text-decoration: none;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav nav ul li a.active {
-    color: rgb(145, 145, 145);
-}
-
-.nav nav ul li a:hover {
-    color: #ccc;
-}
 
 /* Toutes les infos concernant Labeyrie */
 .container {
@@ -120,6 +50,7 @@ header .content h3 {
     width: 70%;
     text-align: center;
     font-weight: 400;
+    font-size: large;
 }
 
 /* La partie Infromations générale */
@@ -131,13 +62,6 @@ article {
     justify-content: center;
 }
 
-article .ligne-blocs {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 article .line-blocs-row {
     width: 100%;
     display: flex;
@@ -145,21 +69,8 @@ article .line-blocs-row {
     overflow-x: scroll;
 }
 
-article .line-blocs-row>p {
-    width: 70%;
-    font-size: large;
-}
-
-article .line-blocs-row2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    text-align: end;
-}
-
-article .line-blocs-row2>p {
-    width: 70%;
-    font-size: large;
+article .line-blocs-col h2 {
+    width: max-content;
 }
 
 article .line-blocs-row .cellule {
@@ -194,92 +105,75 @@ article .line-blocs-row .cellule p {
     font-size: large;
 }
 
-/* Le pied de page */
-footer {
-    margin: 10px 10px 10px 0;
-    width: 100%;
-    height: 100px;
-    display: flex;
-    flex-grow: 10;
-    flex-direction: row;
+article #fete {
+    background-image: url(/data/img/fond-ecran/fonctions/fête.jpg);
+    background-size: cover;
+    border-radius: 20px;
 }
 
-footer .f-left {
+article #fete {
+    margin: 10px 0 50px 0;
+    width: 100%;
+    height: 600px;
     display: flex;
-    flex: 1 1 20%;
-    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+}
+
+article #fete .info {
+    display: flex;
     justify-content: center;
-    align-items: flex-end;
 }
 
-footer .f-left .logos {
+article #fete .info .description {
+    width: 50%;
     display: flex;
-    flex-direction: row;
     align-items: center;
+    font-size: large;
 }
 
-footer .f-left .logos {
-    text-decoration: none;
-}
 
-footer .f-left .logos a img {
-    margin: 10px;
-    width: 30px;
-}
-
-footer .f-mid {
-    display: flex;
-    flex: 1 1 80%;
-    align-items: center;
-    justify-content: flex-end;
-    flex-direction: column;
-}
-
-footer .f-mid .logo {
-    width: 150px;
-}
-
-footer .f-mid .logo img {
+/* Analyse fonctionelle*/
+article .line-blocs-col {
+    margin: 0 0 100px 0;
     width: 100%;
-}
-
-footer .f-mid .mid-content {
     display: flex;
-    flex-direction: row;
-}
-
-footer .f-mid .mid-content p {
-    margin: 8px;
-}
-
-footer .f-mid .mid-content p a {
-    color: #ccc;
-
-}
-
-footer .f-right {
-    display: flex;
-    flex: 1 1 20%;
     flex-direction: column;
-    justify-content: end;
-    align-items: flex-end;
 }
 
-footer .f-right p {
-    margin: 10px 0 0 0;
-    color: rgb(95, 95, 95);
-    font-size: small;
+article .line-blocs-col h2 {
+    border-bottom: 1px solid #d1c1a2;
 }
 
-.nav-mobile {
-    display: none;
+article .line-blocs-col .info {
+    width: 100%;
+    display: flex;
+}
+
+article .line-blocs-col:nth-child(2n) .info {
+    flex-direction: row-reverse;
+}
+
+article .line-blocs-col .info .description {
+    width: 50%;
+    font-size: large;
+}
+
+article .line-blocs-col .info .image {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+article .line-blocs-col .info .image img {
+    width: 80%;
+    height: auto;
+    border-radius: 20px;
 }
 
 @media screen and (min-width:720px) and (max-width:1200px) {
-    .nav nav ul li {
-        margin: 0 10px 0 0;
-    }
-
     body .container {
         width: 720px;
     }
@@ -292,87 +186,59 @@ footer .f-right p {
         width: 100%;
     }
 
-    article .line-blocs-row2>p {
+    article #fete .info .description {
+        width: 80%;
+        font-size: medium;
+    }
+
+    article .line-blocs-col .info:nth-child(2n),
+    article .line-blocs-col .info:nth-child(2n+1) {
+        flex-direction: column;
+    }
+
+    article .line-blocs-col .info .description {
         width: 100%;
     }
 
-
-    footer .f-left {
-        flex: 1 1 max-content;
+    article .line-blocs-col .info .image {
+        width: 100%;
     }
 
-    footer .f-mid {
-        flex: 1 1 max-content;
-    }
-
-    footer .f-right {
-        flex: 1 1 max-content;
-    }
 }
 
 @media screen and (min-width:0px) and (max-width:720px) {
-    .nav {
-        display: none;
-    }
-
     body .container {
         width: 95%;
     }
 
-    article .line-blocs-row>p {
+    article .line-blocs-row>p,
+    article .line-blocs-col>p {
         width: 100%;
         text-align: start;
-        font-size: medium;
+        font-size: small;
     }
 
-    article .line-blocs-row2>p {
-        width: 100%;
-        text-align: start;
-        font-size: medium;
+    article #fete .info .description {
+        width: 80%;
     }
 
-    footer {
-        width: 100%;
-        height: max-content;
-        flex-direction: column;
-    }
-
-    footer .f-right {
-        align-items: center;
-    }
-
-    .nav-mobile {
+    article #fete .info .description p {
         margin: 0;
-        padding: 0;
-        width: 96%;
-        height: max-content;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-top: 1px solid #ccc;
-        background-color: white;
-        position: sticky;
-        bottom: 0;
+        font-size: medium;
     }
+    article .line-blocs-col{
 
-    .nav-mobile ul {
-        padding: 0;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
     }
-
-    .nav-mobile ul li {
-        display: flex;
-        flex: 1 1 20%;
-        align-items: center;
+    article .line-blocs-col .info:nth-child(2n),
+    article .line-blocs-col .info:nth-child(2n+1) {
         flex-direction: column;
-        justify-content: center;
-        list-style: none;
     }
 
-    .nav-mobile ul li i {
-        color: #333;
+    article .line-blocs-col .info .description {
+        width: 100%;
     }
 
+    article .line-blocs-col .info .image {
+        width: 100%;
+    }
 }
