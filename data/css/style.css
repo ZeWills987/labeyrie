@@ -1,0 +1,244 @@
+/* Police ces caractères */
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Tout le contenu du site */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Toutes les infos concernant Labeyrie */
+.container {
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* L'en tête de la page */
+header {
+    margin: 0;
+    display: flex;
+    flex-grow: 3;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header .content {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .content h1 {
+    font-weight: 600;
+}
+
+header .content h3 {
+    width: 70%;
+    text-align: center;
+    font-weight: 400;
+    font-size: large;
+}
+
+/* La partie Infromations générale */
+article {
+    margin: 0;
+    display: flex;
+    flex-grow: 5;
+    flex-direction: column;
+    justify-content: center;
+}
+
+article .line-blocs-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+article .line-blocs-col h2 {
+    width: max-content;
+}
+
+article .line-blocs-row .cellule {
+    margin: 0 20px 0 5px;
+    width: 240px;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: top ease 1s;
+    border-radius: 10px;
+    top: 0;
+}
+
+article .line-blocs-row .cellule:hover {
+    top: -8px;
+}
+
+
+article .line-blocs-row .cellule img {
+    width: 200px;
+    height: 200px;
+}
+
+article .line-blocs-row .cellule p {
+    margin: 0 0 5px 0;
+    height: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: large;
+}
+
+article #fete {
+    background-image: url(/data/img/fond-ecran/fonctions/fête.jpg);
+    background-size: cover;
+    border-radius: 20px;
+}
+
+article #fete {
+    margin: 10px 0 50px 0;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+}
+
+article #fete .info {
+    display: flex;
+    justify-content: center;
+}
+
+article #fete .info .description {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    font-size: large;
+}
+
+
+/* Analyse fonctionelle*/
+article .line-blocs-col {
+    margin: 0 0 100px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+article .line-blocs-col h2 {
+    border-bottom: 1px solid #d1c1a2;
+}
+
+article .line-blocs-col .info {
+    width: 100%;
+    display: flex;
+}
+
+article .line-blocs-col:nth-child(2n) .info {
+    flex-direction: row-reverse;
+}
+
+article .line-blocs-col .info .description {
+    width: 50%;
+    font-size: large;
+}
+
+article .line-blocs-col .info .image {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+article .line-blocs-col .info .image img {
+    width: 80%;
+    height: auto;
+    border-radius: 20px;
+}
+
+@media screen and (min-width:720px) and (max-width:1200px) {
+    body .container {
+        width: 720px;
+    }
+
+    header .content h3 {
+        width: 100%;
+    }
+
+    article .line-blocs-row>p {
+        width: 100%;
+    }
+
+    article #fete .info .description {
+        width: 80%;
+        font-size: medium;
+    }
+
+    article .line-blocs-col .info:nth-child(2n),
+    article .line-blocs-col .info:nth-child(2n+1) {
+        flex-direction: column;
+    }
+
+    article .line-blocs-col .info .description {
+        width: 100%;
+    }
+
+    article .line-blocs-col .info .image {
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width:0px) and (max-width:720px) {
+    body .container {
+        width: 95%;
+    }
+
+    article .line-blocs-row>p,
+    article .line-blocs-col>p {
+        width: 100%;
+        text-align: start;
+        font-size: small;
+    }
+
+    article #fete .info .description {
+        width: 80%;
+    }
+
+    article #fete .info .description p {
+        margin: 0;
+        font-size: medium;
+    }
+    article .line-blocs-col{
+
+    }
+    article .line-blocs-col .info:nth-child(2n),
+    article .line-blocs-col .info:nth-child(2n+1) {
+        flex-direction: column;
+    }
+
+    article .line-blocs-col .info .description {
+        width: 100%;
+    }
+
+    article .line-blocs-col .info .image {
+        width: 100%;
+    }
+}
